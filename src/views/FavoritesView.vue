@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <h1>This is the favorites page</h1>
-  </div>
+  </section>
 </template>
