@@ -3,7 +3,7 @@ import { RouterLink } from "vue-router"
 </script>
 
 <template>
-  <nav class="absolute bottom-0 w-full bg-gray-800 text-center">
+  <nav class="w-full bg-gray-800 text-center">
     <div class="grid grid-cols-3 p-3 text-gray-400">
       <RouterLink to="/favorites" class="flex flex-col items-center gap-2">
         <span class="material-symbols-outlined rounded-3xl px-5 py-1">
