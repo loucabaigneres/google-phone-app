@@ -3,7 +3,7 @@
     <div
       class="flex h-7 w-7 items-center justify-center rounded-full bg-orange-500"
     >
-      <h3 class="text-lg text-gray-950">M</h3>
+      <h3 class="text-lg text-gray-950">J</h3>
     </div>
     <div class="flex flex-col">
       <h5 class="text-sm">John Doe</h5>
