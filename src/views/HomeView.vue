@@ -4,25 +4,19 @@ import CallCard from "@/components/CallCard.vue"
 
 <template>
   <section
-    class="no-scrollbar flex h-full flex-col gap-4 overflow-y-auto px-3 py-1 text-gray-400"
+    class="flex h-full flex-col overflow-y-auto px-3 pt-4 text-gray-400 no-scrollbar"
   >
-    <h4 class="text-xs">Today</h4>
-    <div class="flex flex-col gap-4">
-      <CallCard />
-      <CallCard />
-      <CallCard />
+    <h4 class="mb-6 text-xs">Today</h4>
+    <div class="flex flex-col gap-6">
+      <CallCard v-for="index in 2" :key="index" />
     </div>
-    <h4 class="text-xs">Yesterday</h4>
-    <div class="flex flex-col gap-4">
-      <CallCard />
-      <CallCard />
-      <CallCard />
+    <h4 class="my-6 text-xs">Yesterday</h4>
+    <div class="flex flex-col gap-6">
+      <CallCard v-for="index in 7" :key="index" />
     </div>
-    <h4 class="text-xs">Older</h4>
-    <div class="flex flex-col gap-4">
-      <CallCard />
-      <CallCard />
-      <CallCard />
+    <h4 class="my-6 text-xs">Older</h4>
+    <div class="flex flex-col gap-6">
+      <CallCard v-for="index in 5" :key="index" />
     </div>
   </section>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center gap-3">
     <div
-      class="flex size-7 items-center justify-center rounded-full bg-orange-500"
+      class="flex size-8 items-center justify-center rounded-full bg-orange-500"
     >
       <h3 class="text-lg text-gray-950">J</h3>
     </div>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="ml-auto flex size-7 items-center justify-center rounded-full">
-      <span class="material-symbols-outlined text-xl"> call </span>
+      <span class="material-symbols-outlined text-lg"> call </span>
     </div>
   </div>
 </template>
