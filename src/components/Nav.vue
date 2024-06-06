@@ -4,24 +4,30 @@ import { RouterLink } from "vue-router"
 
 <template>
   <nav class="w-full bg-gray-800 text-center">
-    <div class="grid grid-cols-3 p-3 text-gray-400">
-      <RouterLink to="/favorites" class="flex flex-col items-center gap-2">
-        <span class="material-symbols-outlined rounded-3xl px-5 py-1">
+    <div class="grid grid-cols-3 py-2 text-gray-400">
+      <RouterLink to="/favorites" class="flex flex-col items-center gap-1.5">
+        <span
+          class="material-symbols-outlined rounded-3xl px-4 py-0.5 text-xl/5"
+        >
           star
         </span>
-        <span class="text-sm"> Favorites </span>
+        <span class="text-xs"> Favorites </span>
       </RouterLink>
-      <RouterLink to="/" class="flex flex-col items-center gap-2">
-        <span class="material-symbols-outlined rounded-3xl px-5 py-1">
+      <RouterLink to="/" class="flex flex-col items-center gap-1.5">
+        <span
+          class="material-symbols-outlined rounded-3xl px-4 py-0.5 text-xl/5"
+        >
           schedule
         </span>
-        <span class="text-sm"> Recents </span>
+        <span class="text-xs"> Recents </span>
       </RouterLink>
-      <RouterLink to="/contacts" class="flex flex-col items-center gap-2">
-        <span class="material-symbols-outlined rounded-3xl px-5 py-1">
+      <RouterLink to="/contacts" class="flex flex-col items-center gap-1.5">
+        <span
+          class="material-symbols-outlined rounded-3xl px-4 py-0.5 text-xl/5"
+        >
           group
         </span>
-        <span class="text-sm"> Contacts </span>
+        <span class="text-xs"> Contacts </span>
       </RouterLink>
     </div>
     <div class="flex w-full justify-center py-2">
