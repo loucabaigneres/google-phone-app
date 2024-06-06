@@ -1,7 +1,7 @@
 <template>
-  <section class="flex items-center justify-between p-3 pb-2">
+  <section class="flex items-center justify-between px-3 py-1">
     <div
-      class="flex h-10 w-full items-center gap-2 rounded-full bg-gray-800 px-3 text-gray-400"
+      class="flex h-9 w-full items-center gap-2 rounded-full bg-gray-800 px-3 text-gray-400"
     >
       <span class="material-symbols-outlined text-xl"> search </span>
       <input
