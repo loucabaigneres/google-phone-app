@@ -11,7 +11,9 @@ import { RouterView } from "vue-router"
   >
     <StatusBar />
     <SearchBar />
-    <RouterView />
+    <div class="h-full overflow-hidden px-3 py-0.5">
+      <RouterView />
+    </div>
     <Nav />
   </main>
 </template>
