@@ -1,5 +1,33 @@
 <script setup>
 import ContactCard from "@/components/ContactCard.vue"
+
+const contacts = [
+  {
+    id: 1,
+    name: "John Doe",
+    number: "1234567890",
+  },
+  {
+    id: 2,
+    name: "Jane Doe",
+    number: "0987654321",
+  },
+  {
+    id: 3,
+    name: "Alice",
+    number: "1231231231",
+  },
+  {
+    id: 4,
+    name: "Bob",
+    number: "3213213213",
+  },
+  {
+    id: 5,
+    name: "Charlie",
+    number: "4564564564",
+  },
+]
 </script>
 
 <template>
@@ -19,17 +47,11 @@ import ContactCard from "@/components/ContactCard.vue"
         </div>
       </div>
       <div class="col-span-6 flex flex-col">
-        <ContactCard v-for="index in 10" :key="index" />
-      </div>
-    </div>
-    <div class="grid grid-cols-7">
-      <div class="sticky top-0 h-fit">
-        <div class="flex size-10 items-center">
-          <span class="text-base font-medium text-indigo-300">K</span>
-        </div>
-      </div>
-      <div class="col-span-6 flex flex-col">
-        <ContactCard v-for="index in 10" :key="index" />
+        <ContactCard
+          v-for="(contact, index) in contacts"
+          :key="index"
+          :contact="contact"
+        />
       </div>
     </div>
   </section>
