@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-between px-9 py-3 text-gray-100">
+  <div class="flex justify-between px-9 py-3 text-gray-100">
     <div class="flex items-center gap-2">
       <p class="text-xs">02:57</p>
       <span class="material-symbols-outlined text-xs/3"> g_translate </span>
