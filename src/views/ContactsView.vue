@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from "vue-router"
 import ContactCard from "@/components/ContactCard.vue"
 import { computed } from "vue"
 
@@ -98,13 +99,13 @@ const groupedContacts = computed(() => {
               }}</span>
             </div>
           </div>
-          <div class="col-span-6 flex flex-col">
-            <ContactCard
-              v-for="contact in group"
-              :key="contact.id"
-              :contact="contact"
-            />
-          </div>
+          <ul class="col-span-6 flex flex-col">
+            <li v-for="contact in group" :key="contact.id">
+              <RouterLink :to="{ name: 'contact', params: { id: contact.id } }">
+                <ContactCard :contact="contact" />
+              </RouterLink>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
