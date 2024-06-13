@@ -1,12 +1,12 @@
-<script>
-export default {
-  props: {
-    contact: {
-      type: Object,
-      required: true,
-    },
+<script setup>
+import { defineProps } from "vue"
+
+const props = defineProps({
+  contact: {
+    type: Object,
+    required: true,
   },
-}
+})
 </script>
 
 <template>

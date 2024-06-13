@@ -1,50 +1,10 @@
 <script setup>
-import { RouterLink } from "vue-router"
 import ContactCard from "@/components/ContactCard.vue"
+import { useContactStore } from "@/stores/contacts.js"
 import { computed } from "vue"
+import { RouterLink } from "vue-router"
 
-const contacts = [
-  {
-    id: 1,
-    name: "John Doe",
-    number: "1234567890",
-  },
-  {
-    id: 2,
-    name: "Jane Doe",
-    number: "0987654321",
-  },
-  {
-    id: 3,
-    name: "Alice",
-    number: "1231231231",
-  },
-  {
-    id: 4,
-    name: "Bob",
-    number: "3213213213",
-  },
-  {
-    id: 5,
-    name: "Charlie",
-    number: "4564564564",
-  },
-  {
-    id: 6,
-    name: "David",
-    number: "7897897897",
-  },
-  {
-    id: 7,
-    name: "Eve",
-    number: "9879879879",
-  },
-  {
-    id: 8,
-    name: "Emma",
-    number: "6546546546",
-  },
-]
+const { contacts } = useContactStore()
 
 const groupedContacts = computed(() => {
   // Grouper les contacts par première lettre du nom

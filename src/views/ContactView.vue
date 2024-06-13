@@ -1,52 +1,11 @@
 <script setup>
+import { useContactStore } from "@/stores/contacts.js"
 import { computed, ref } from "vue"
-import { useRoute } from "vue-router"
+import { RouterLink, useRoute } from "vue-router"
 
+const { contacts } = useContactStore()
 const route = useRoute()
 const contactId = ref(route.params.id)
-
-const contacts = [
-  {
-    id: 1,
-    name: "John Doe",
-    number: "1234567890",
-  },
-  {
-    id: 2,
-    name: "Jane Doe",
-    number: "0987654321",
-  },
-  {
-    id: 3,
-    name: "Alice",
-    number: "12 31 23 12 31",
-  },
-  {
-    id: 4,
-    name: "Bob",
-    number: "3213213213",
-  },
-  {
-    id: 5,
-    name: "Charlie",
-    number: "4564564564",
-  },
-  {
-    id: 6,
-    name: "David",
-    number: "7897897897",
-  },
-  {
-    id: 7,
-    name: "Eve",
-    number: "9879879879",
-  },
-  {
-    id: 8,
-    name: "Emma",
-    number: "6546546546",
-  },
-]
 
 const contact = computed(() =>
   contacts.find((c) => c.id.toString() === contactId.value),
@@ -56,9 +15,9 @@ const contact = computed(() =>
 <template>
   <section class="flex h-full flex-col overflow-hidden text-gray-100">
     <header class="flex gap-4 p-3">
-      <span class="material-symbols-outlined mr-auto text-xl">
-        arrow_back
-      </span>
+      <RouterLink to="/contacts" class="mr-auto">
+        <span class="material-symbols-outlined text-xl"> arrow_back </span>
+      </RouterLink>
       <span class="material-symbols-outlined text-xl"> edit </span>
       <span class="material-symbols-outlined text-xl"> star </span>
       <span class="material-symbols-outlined text-xl"> more_vert </span>
@@ -68,7 +27,7 @@ const contact = computed(() =>
         <div
           class="flex size-36 items-center justify-center rounded-full bg-orange-500 text-gray-950"
         >
-          <span class="text-7xl font-normal">M</span>
+          <span class="text-7xl font-normal">{{ contact.name[0] }}</span>
         </div>
         <h1 class="text-xl font-light">{{ contact.name }}</h1>
         <div class="grid w-full grid-cols-4 items-center">
