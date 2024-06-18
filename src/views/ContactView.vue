@@ -14,7 +14,7 @@ const contact = computed(() =>
 
 <template>
   <section class="flex h-full flex-col overflow-hidden text-gray-100">
-    <header class="flex gap-4 p-3">
+    <header class="flex items-center gap-4 p-3">
       <RouterLink to="/contacts" class="mr-auto">
         <span class="material-symbols-outlined text-xl"> arrow_back </span>
       </RouterLink>
